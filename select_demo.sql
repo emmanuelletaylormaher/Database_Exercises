@@ -20,3 +20,6 @@ SELECT sales from albums WHERE artist = "Bruce Springsteen";
 SELECT *from albums where release_date > 1990;
 
 SELECT artist, name from albums where release_date between 1995 and 1998;
+
+--How to select with wildcards, % is the wildcard symbol
+SELECT * from albums where artist like "%Bruce%";
