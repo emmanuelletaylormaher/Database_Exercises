@@ -1,1 +1,13 @@
-hyello
+USE codeup_test_db;
+
+DROP TABLE IF EXISTS albums;
+
+CREATE TABLE IF NOT EXISTS albums (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	artist VARCHAR(50) DEFAULT "NONE",
+	name VARCHAR(70) DEFAULT "NONE",
+	release_date DATE NOT NULL,
+	sales INT NOT NULL,
+	genre VARCHAR(20) DEFAULT "NONE",
+	PRIMARY KEY (id)
+);
