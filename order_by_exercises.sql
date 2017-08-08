@@ -1,3 +1,5 @@
+-- Modify your first query to order by first name. 
+-- The first result should be Irena Majewski and the last result should be Vidya Schaft.
 SELECT *
 FROM employees
 WHERE gender = "M"
@@ -5,7 +7,20 @@ WHERE gender = "M"
 		first_name = "Irena"
 	OR first_name = "Vidya"
 	OR first_name = "Maya"
-	);
+	)
+ORDER BY first_name;
+
+-- Update the query to order by first name and then last name. 
+-- The first result should now be Irena Acton and the last should be Vidya Zweizig.
+SELECT *
+FROM employees
+WHERE gender = "M"
+	AND (
+		first_name = "Irena"
+	OR first_name = "Vidya"
+	OR first_name = "Maya"
+	)
+ORDER BY first_name, last_name;
 
 SELECT *
 FROM employees
