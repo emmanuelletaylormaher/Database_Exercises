@@ -22,6 +22,18 @@ WHERE gender = "M"
 	)
 ORDER BY first_name, last_name;
 
+-- Change the order by clause so that you order by last name before first name. 
+-- Your first result should still be Irena Acton but now the last result should be Maya Zyda.
+SELECT *
+FROM employees
+WHERE gender = "M"
+	AND (
+		first_name = "Irena"
+	OR first_name = "Vidya"
+	OR first_name = "Maya"
+	)
+ORDER BY last_name, first_name;
+
 SELECT *
 FROM employees
 WHERE last_name LIKE "E%"
