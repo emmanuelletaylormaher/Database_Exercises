@@ -39,14 +39,14 @@ AND last_name LIKE "%e";
 
 
 -- Employees hired in the 90s — 135,214 rows.
-SELECT *
-FROM employees
-WHERE hire_date BETWEEN "1990-01-01" AND "1999-12-31";
+-- SELECT *
+-- FROM employees
+-- WHERE hire_date BETWEEN "1990-01-01" AND "1999-12-31";
 
 -- Employees born on Christmas — 842 rows.
-SELECT *
-FROM employees
-WHERE birth_date LIKE "%-12-25";
+-- SELECT *
+-- FROM employees
+-- WHERE birth_date LIKE "%-12-25";
 
 
 -- Find all employees hired in the 90s and born on Christmas — 362 rows.
@@ -56,9 +56,9 @@ WHERE hire_date BETWEEN "1990-01-01" AND "1999-12-31"
 AND birth_date LIKE "%-12-25";
 
 -- Employees with a 'q' in their last name — 1,873 rows
-SELECT *
-FROM employees
-WHERE last_name like "%q%";
+-- SELECT *
+-- FROM employees
+-- WHERE last_name like "%q%";
 
 -- Find all employees with a 'q' in their last name but not 'qu' — 547 rows.
 SELECT *
