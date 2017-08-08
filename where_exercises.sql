@@ -59,3 +59,9 @@ AND birth_date LIKE "%-12-25";
 SELECT *
 FROM employees
 WHERE last_name like "%q%";
+
+-- Find all employees with a 'q' in their last name but not 'qu' — 547 rows.
+SELECT *
+FROM employees
+WHERE last_name like "%q%"
+AND last_name NOT LIKE "%qu%";
