@@ -29,3 +29,5 @@ FROM employees
 WHERE last_name like "%q%"
 AND last_name NOT LIKE "%qu%"
 GROUP BY last_name;
+
+--select count(*) as "employees by gender", gender
