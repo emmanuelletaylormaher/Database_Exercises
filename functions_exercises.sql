@@ -2,7 +2,7 @@
 -- Use count(*) and GROUP BY to find the number of employees for each gender 
 -- with those names.
 
-SELECT COUNT(*) as "employees by gender", gender
+SELECT CONCAT(COUNT(*), " ", gender)
 FROM employees
 WHERE 
 	 (
@@ -26,3 +26,16 @@ FROM employees
 WHERE hire_date BETWEEN "1990-01-01" AND "1999-12-31"
 AND birth_date LIKE "%-12-25"
 ORDER BY last_name;
+
+-- Add a GROUP BY clause to your query for last names with 'q' and not 'qu' to 
+-- find the distinct combination of first and last names. You will find there were some 
+-- duplicate first and last name pairs in your previous results.
+--  Add a count() to your results and use ORDER BY to make it easier to find employees
+--   whose unusual name is shared with others.
+
+SELECT *, COUNT(*)
+FROM employees
+WHERE last_name like "%q%"
+AND last_name NOT LIKE "%qu%"
+GROUP BY first_name, last_name
+ORDER BY first_name;
